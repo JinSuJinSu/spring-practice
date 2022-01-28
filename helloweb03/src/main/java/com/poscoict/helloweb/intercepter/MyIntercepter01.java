@@ -3,7 +3,6 @@ package com.poscoict.helloweb.intercepter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.tomcat.util.net.AbstractEndpoint.Handler;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
