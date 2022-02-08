@@ -12,10 +12,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.poscoict.container.config.videosystem.DvdPlayerConfig;
+import com.poscoict.container.config.videosystem.DVDPlayerConfig;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes={DvdPlayerConfig.class})
+@ContextConfiguration(classes={DVDPlayerConfig.class})
 public class DvdPlayerJavaConfigTest {
 	
 	@Autowired
@@ -30,18 +30,22 @@ public class DvdPlayerJavaConfigTest {
 	
 	@Test
 	public void testDVDNotNull() {
+		System.out.println("dvd:" + dvd);
 		assertNotNull(dvd);
 	}
 	
 	@Test
 	public void testDVDPlayerNotNull() {
+		System.out.println("dvdPlayer:" + dvdPlayer);
 		assertNotNull(dvdPlayer);
 	}
 	
 	@Test
 	public void testPlay() {
+		System.out.println("testPlayer:" + dvdPlayer);
 		dvdPlayer.play();
 		assertEquals("Playing Moive MARVEL's Avengers",systemOutRule.getLog().replace("\r\n", "").replace("\n", ""));
+		
 	}
 	
 	
