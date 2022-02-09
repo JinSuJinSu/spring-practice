@@ -30,19 +30,16 @@ public class DvdPlayerJavaConfigTest {
 	
 	@Test
 	public void testDVDNotNull() {
-		System.out.println("dvd:" + dvd);
 		assertNotNull(dvd);
 	}
 	
 	@Test
 	public void testDVDPlayerNotNull() {
-		System.out.println("dvdPlayer:" + dvdPlayer);
 		assertNotNull(dvdPlayer);
 	}
 	
 	@Test
 	public void testPlay() {
-		System.out.println("testPlayer:" + dvdPlayer);
 		dvdPlayer.play();
 		assertEquals("Playing Moive MARVEL's Avengers",systemOutRule.getLog().replace("\r\n", "").replace("\n", ""));
 		
