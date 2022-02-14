@@ -1,11 +1,7 @@
 package com.poscoict.container.videosystem;
 
 
-
-<<<<<<< HEAD
-=======
 import static org.junit.Assert.assertEquals;
->>>>>>> ce5c9b52ea917e91cd01233757a5aa283f53b841
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Ignore;
@@ -21,15 +17,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:com/poscoict/container/config/videosystem/DVDPlayerConfig.xml"})
 public class DVDPlayerXmlConfigTest {
-<<<<<<< HEAD
-	
-=======
->>>>>>> ce5c9b52ea917e91cd01233757a5aa283f53b841
 	@Rule
 	public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 	
 	// @Autowired
-<<<<<<< HEAD
 	// 예외 발생
 	// XML Bean 설정(Avengers)에서는 id를 자동 부여하지 않는다.
 	// 따라서 @Qualifier를 사용할 수 없다.
@@ -39,18 +30,6 @@ public class DVDPlayerXmlConfigTest {
 	@Autowired
 	private DigitalVideoDisc dvd2;
 	
-	@Ignore
-	@Test
-	public void testDvd1() {
-=======
-	// 예외발생
-	// Explicit XML Bean 설정(Avengers)에서는 id를 자동 부여 하지 않는다.
-	// 따라서 @Qualifier를 사용할 수 없다.
-	private DigitalVideoDisc dvd1;
-
-	@Qualifier("ironMan")
-	@Autowired
-	private DigitalVideoDisc dvd2;
 
 	@Qualifier("avengersInfinityWar")
 	@Autowired
@@ -109,29 +88,20 @@ public class DVDPlayerXmlConfigTest {
 
 	@Ignore
 	@Test
-	public void testDvd1() {
+	
+	public void testDvd1() {	// 예외발생
+	// Explicit XML Bean 설정(Avengers)에서는 id를 자동 부여 하지 않는다.
+	// 따라서 @Qualifier를 사용할 수 없다.
 		System.out.println("dvd1:" + dvd1);
->>>>>>> ce5c9b52ea917e91cd01233757a5aa283f53b841
 		assertNotNull(dvd1);
 	}
-	
+
 	@Test
 	public void testDvd2() {
-<<<<<<< HEAD
-		assertNotNull(dvd2);
-	}
-	
-	
-
-
-	
-	
-}
-=======
 		System.out.println("dvd2:" + dvd2);
 		assertNotNull(dvd2);
 	}
-
+	
 	@Test
 	public void testDvd3() {
 		System.out.println("dvd3:" + dvd3);
@@ -221,6 +191,6 @@ public class DVDPlayerXmlConfigTest {
 		dvdPlayer5.play();
 		assertEquals("Playing Movie MARVEL's ironMan",systemOutRule.getLog().replace("\r\n", "").replace("\n", ""));
 	}
-	
 }
->>>>>>> ce5c9b52ea917e91cd01233757a5aa283f53b841
+	
+
